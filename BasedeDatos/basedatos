@@ -3,93 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concierto de Dua Lipa</title>
-    <link rel="stylesheet" href="/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <title>DUALIPA</title>
+     <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="script.js"></script>
+
 </head>
 <body>
+    <h1 class="Dua"> Canciones que más me gustaron en el concierto</h1>
+        <h5 class="Lipa"><i> Por Aline Lara  </i></h5>
 
-    <!--
-     
-     -->
-    
-        <h1 style="color: rgba(106, 4, 196, 0.773);"> Canciones que más me gustaron en el concierto</h1>
-        <h5 style="color: rgba(24, 37, 208, 0.816);"><i> Por Aline Lara  </i></h5>
-
-        <p style="color: rgb(255, 255, 255);">
+        <p >
 Asistir al concierto de Dua Lipa fue una gran experiencia, los elementos que tenía el escenario eran impresionantes; el trabajo que hicieron tanto los musicos como los camarógrafos fue excepcional, la producción en general fue increíble, sin duda es de los mejores conciertos a los que he ido.   <i>rock</i> en sus vertientes de <i>rap</i>, <i>pop</i> y alternativo.
             <br>
-            <br>
-          Es verdad que la pasé bastante bien, como siempre, sin embargo asistir a un concierto suele ser agotador cuando no tienes el dinero suficiente para comprar un boleto VIP; a pesar de eso  la experiencia que se vive durante todo el día es también parte de la misma diversión. <i>"Radical Optimism Tour"</i> Es sin duda uno de los mejores trabajos de produccion y entrega en escena que haya visto, las coreografías, la musica, las pistas, los visuales, todo tenia mucho trabajo involucrado que valío 100% la pena. 
-          <br>
-            <br>
-        Me gustaría algún día poder trabajar en una producción como esas, estar involucrada en la parte sobretodo de montaje y sonido, pues me parece una parte increible, sé que tengo oportunidad de hacer algo así, simplemente sería cuestión de tocar puertas. 
+Es verdad que la pasé bastante bien, como siempre, sin embargo asistir a un concierto suele ser agotador cuando no tienes el dinero suficiente para comprar un boleto VIP; a pesar de eso  la experiencia que se vive durante todo el día es también parte de la misma diversión. <i>"Radical Optimism Tour"</i> Es sin duda uno de los mejores trabajos de produccion y entrega en escena que haya visto, las coreografías, la musica, las pistas, los visuales, todo tenia mucho trabajo involucrado que valío 100% la pena. 
+          <br> Me gustaría algún día poder trabajar en una producción como esas, estar involucrada en la parte sobretodo de montaje y sonido, pues me parece una parte increible, sé que tengo oportunidad de hacer algo así, simplemente sería cuestión de tocar puertas. 
             
         </p>
-        <br>
-        <div class="top">
-            <p id="top1"></p>
-            <p id="top2"></p>
-            <p id="top3"></p>
-            <p id="top4"></p>
-            <p id="top5"></p>
-            <p id="top6"></p>
-            <p id="top7"></p>
-            <p id="top8"></p>
-            <p id="top9"></p>
-            <p id="top10"></p>
-        </div>
-
-        <div class="NombreCancion">
-            <p id="nomC1"></p>
-            <p id="nomC2"></p>
-            <p id="nomC3"></p>
-            <p id="nomC4"></p>
-            <p id="nomC5"></p>
-            <p id="nomC6"></p>
-            <p id="nomC7"></p>
-            <p id="nomC8"></p>
-            <p id="nomC9"></p>
-            <p id="nomC10"></p>
-        </div>
-
-    <script>
-        const namuClient = supabase.createClient('https://geeatbnsxnjicdfdcjvr.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlZWF0Ym5zeG5qaWNkZmRjanZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4OTkzNTUsImV4cCI6MjA3NzQ3NTM1NX0.ja-NZq9Ql01n5gF_IN-vl8yCxbELUzLt2zXr1kU77Ok', {
-            db: {schema:"public"}
-        });
-
-        // Este código sirve para llamar a una frase de la tabla
-        (async () => { // esta es una función anonima
-            // Este código sirve para llamar a una frase de la tabla en supabase
-            const response = await namuClient.from("tarea3").select("top")
-            console.log(response.data[0].top)
-            
-            document.getElementById("top1").innerHTML = response.data[0].top;
-            document.getElementById("top2").innerHTML = response.data[1].top;
-            document.getElementById("top3").innerHTML = response.data[2].top;
-            document.getElementById("top4").innerHTML = response.data[3].top;
-            document.getElementById("top5").innerHTML = response.data[4].top;
-            document.getElementById("top6").innerHTML = response.data[5].top;
-            document.getElementById("top7").innerHTML = response.data[6].top;
-            document.getElementById("top8").innerHTML = response.data[7].top;
-            document.getElementById("top9").innerHTML = response.data[8].top;
-            document.getElementById("top10").innerHTML = response.data[9].top;
-
-            const response2 = await namuClient.from("tarea3").select("nomCancion")
-            console.log(response2.data[0].nomCancion)
-
-            document.getElementById("nomC1").innerHTML = response2.data[0].nomCancion;
-            document.getElementById("nomC2").innerHTML = response2.data[1].nomCancion;
-            document.getElementById("nomC3").innerHTML = response2.data[2].nomCancion;
-            document.getElementById("nomC4").innerHTML = response2.data[3].nomCancion;
-            document.getElementById("nomC5").innerHTML = response2.data[4].nomCancion;
-            document.getElementById("nomC6").innerHTML = response2.data[5].nomCancion;
-            document.getElementById("nomC7").innerHTML = response2.data[6].nomCancion;
-            document.getElementById("nomC8").innerHTML = response2.data[7].nomCancion;
-            document.getElementById("nomC9").innerHTML = response2.data[8].nomCancion;
-            document.getElementById("nomC10").innerHTML = response2.data[9].nomCancion;
-        })()
-
-    </script>
 </body>
 </html>
